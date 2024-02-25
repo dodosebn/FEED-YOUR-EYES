@@ -1,0 +1,54 @@
+To practice using the escape function, you can consider building a simple web application that involves user input and dynamic content. Here's an example project idea:
+
+Project: Guestbook Application
+
+Description:
+Create a guestbook application where users can leave comments or messages. The application should allow users to input their name and a message, which will be displayed on the page. To ensure the security and proper rendering of user-generated content, you'll use the escape function to escape special characters before displaying them.
+
+Features:
+1.Input form: Create a form where users can enter their name and message.
+
+2.Submission: Handle form submission and store the user's name and message in an array or database.
+
+3.Display messages: Retrieve and display the stored messages on the page, ensuring that the user-generated content is properly escaped using the escape function.
+
+4.Styling: Apply CSS to make the guestbook visually appealing.
+
+5.Optional: Implement additional features like pagination, filtering, or user authentication.
+
+By building this project, you'll have the opportunity to practice using the escape function to ensure the secure rendering of user-generated content within an HTML context. It will also allow you to work with HTML, CSS, and possibly a backend technology for storing and retrieving the messages.
+
+Remember to apply the escape function to the user-generated content before displaying it on the page to prevent any potential security vulnerabilities.
+
+STORING MESSAGES
+i. After the user submits the form, retrieve the name and message values from the input fields.
+ii. Create an object or JSON structure to represent the message, including properties such as name and message.
+iii. Convert the message object to a string using JSON.stringify().
+iv. Use localStorage.setItem() to store the stringified message. You can use a unique key or a predefined key like "messages".
+<code>
+const message = {
+  name: "John",
+  message: "Hello, world!"
+};
+
+const messageString = JSON.stringify(message);
+localStorage.setItem("messages", messageString);
+```
+</code>
+
+RETRIVING MESSAGES
+i. Use localStorage.getItem() to retrieve the stringified messages from local storage.
+ii. Convert the string back to an object using JSON.parse().
+iii. Iterate through the messages and display them on the page, ensuring that you escape the user-generated content using the escape function.
+<code>
+const messagesString = localStorage.getItem("messages");
+const messages = JSON.parse(messagesString);
+
+messages.forEach((message) => {
+  const escapedName = escape(message.name);
+  const escapedMessage = escape(message.message);
+  // Display the escapedName and escapedMessage on the page
+});
+```
+</code>
+
