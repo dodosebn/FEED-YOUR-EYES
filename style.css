@@ -4,18 +4,62 @@ body{
     padding: 2em;
     font-family: Arial, Helvetica, sans-serif;
 }
-.Everything, footer{
+.Everything, footer, .search-cont, .welcomePOP{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.videoHolder h5{
+
+.welcomePOP{padding-top: 10em;}
+.message{
+    background-color: #fff;
+    border-radius: 4px;
+    height: 10em;
+    width: 70em;
+}
+#btn, button{
+    border: none;
+    background-color: black;
+    box-shadow:2px 2px 2px red;
+    color: #fff;
+    width: 8em;
+    height: 3em;
+    font-size: 1.2em;
+}
+button{
+    width: 5em;
+    height: 2em;
     font-size: 1em;
 }
+.wel-btn-cont, .wel-btn-hold{ text-align: center;}
+.search-hold{
+    text-align: center;
+    position: relative;
+}
+.search-icon{
+position: absolute;
+right: 0.8em;
+bottom: 0;
+padding-bottom: 0.4em;
+}
+.fa-magnifying-glass{ font-size: 2em;}
+#search{
+    border: 1px solid #dedede;
+    outline: none;
+    width: 22em;
+    height: 3em;
+    border-radius: 4px;
+    text-indent: 1em;
+    font-size: 1em;}
+.videoHolder h5{ font-size: 1em;}
 .space{ padding: 6px;}
-#Qtn{
+#Qtn, .message p{
     text-shadow: 2px 2px 2px red;
     text-align: center;
+}
+.message p{
+    font-size: 2em;
+   text-shadow:1px 1px 1px gray;
 }
 #Stn{
     font-size: 1.2em;
@@ -25,16 +69,8 @@ body{
         text-align: center;
         padding: 2em;
     }
-    #btn{
-        border: none;
-        background-color: black;
-        box-shadow:2px 2px 2px red;
-        color: #fff;
-        width: 8em;
-        height: 3em;
-        font-size: 1.2em;
-    }
-    #btn:hover{
+  
+    #btn:hover, button:hover{
         color: black;
         background-color: red;
         box-shadow:2px 2px 2px white;
@@ -51,11 +87,15 @@ body{
     .videHolder h5{  font-size: 2em;}
     .instruction-hold p{
         font-size: 1em;
-    line-height: 1.5em;}
-    .cooder{
-        text-align: center;
-    }
+    line-height: 1.5em;
+}
+    .cooder{ text-align: center;}
 @media (max-width: 400px) {
+    .message{
+        background-color: #fff;
+        height: 8em;
+        width: 22em;
+    }
     #Stn{
         font-size: 0.8em;
         text-align-last: center;
@@ -74,10 +114,12 @@ body{
             width: 16em;
             height: 16em;
         }
-        .instruction-hold p{
-            width: 16.5em;
-        }
-        .cooder{
-            font-size: 0.7em;
-        }
+            #search{
+                width: 20em;
+                height: 2em;
+            }
+                .fa-magnifying-glass{ font-size: 1em;    }
+        .message p{ font-size: 1em; }
+        .instruction-hold p{ width: 16.5em;}
+        .cooder{ font-size: 0.7em; }
 }

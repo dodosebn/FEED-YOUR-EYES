@@ -6,16 +6,35 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Feed Your Eyes</title>
 </head>
 <body>
     <div class="Everything">
-       <div class="container">
+        <div class="welcomePOP">
+            <div class="message">
+                <p>Hey, do you Prefer seeing random meals or searching for a particular meal?</p>
+                <div class="wel-btn-cont">
+                    <div class="wel-btn-hold">
+                <button id="showRandom">Random</button>
+            <button id="showSearch">Search</button>
+            </div>
+        </div>
+            </div>
+        </div>
+       <div class="container" style="display: none">
         <div class="Ques">
             <h1 id="Qtn"></h1>
             <p id="Stn"></p>
         </div>
-
+<div class="search-cont">
+    <div class="search-hold">
+        <input type="search" name="search" id="search" placeholder="Search for Any Meal">
+    <div class="search-icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    </div>
+</div>
         <div class="SeeAmeal">
             <input type="submit" value="See a Meal" id="btn">
         </div>
@@ -28,6 +47,6 @@
     <p class="font-effect-neon">PLS DON'T BE OFFENDED</p>
  </div>
 </footer>
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
